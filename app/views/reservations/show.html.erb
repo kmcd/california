@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Arrival:</b>
+  <%= @reservation.arrival %>
+</p>
+
+<p>
+  <b>Departure:</b>
+  <%= @reservation.departure %>
+</p>
+
+<p>
+  <b>Room:</b>
+  <%= @reservation.room_id %>
+</p>
+
+<p>
+  <b>Guest:</b>
+  <%= @reservation.guest_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_reservation_path(@reservation) %> |
+<%= link_to 'Back', reservations_path %>

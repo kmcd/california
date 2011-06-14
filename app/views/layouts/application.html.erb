@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>California</title>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+   <div class='background'>
+      <%= image_tag '../images/beach.jpg' %>
+   </div>
+   
+   <div class='content'>
+      <h1 class='name'>Hotel California</h1>
+      
+      <ol class='nav'>
+         <li><%= link_to 'Hotel', hotels_path %></li>
+         <li><%= link_to 'Rooms', rooms_path %></li>
+         <li><%= link_to 'Reservations', reservations_path %></li>
+         <li><%= link_to 'Guests', guests_path %></li>
+         <li><%= link_to 'Checkin', checkins_path %></li>
+      </ol>
+      
+      <%= yield %>
+   </div>
+</body>
+</html>

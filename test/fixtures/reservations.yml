@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  arrival: 2011-06-14 08:42:18
+  departure: 2011-06-14 08:42:18
+  room_id: 1
+  guest_id: 1
+
+two:
+  arrival: 2011-06-14 08:42:18
+  departure: 2011-06-14 08:42:18
+  room_id: 1
+  guest_id: 1
