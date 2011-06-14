@@ -23,6 +23,10 @@
     <%= f.label :reservation_id %><br />
     <%= f.text_field :reservation_id %>
   </div>
+  <div class="field">
+    <%= f.label :room %><br />
+    <%= f.collection_select :room_id, Room.all, :id, :number %>
+  </div>
   
   <%= f.fields_for :guests do |g| %>
      <div class="field">
