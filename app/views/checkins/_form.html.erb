@@ -21,18 +21,23 @@
     <%= f.text_field :reservation_id %>
   </div>
   
-  <%= f.fields_for :guests do |guest_form| %>
+  <div class="field">
+    <%= f.label :room_id %><br />
+    <%= f.collection_select :room_id, Room.all, :id, :number %>
+  </div>
+  
+  <%= f.fields_for :guests do |g| %>
      <div class="field">
-       <%= guest_form.label :name %><br />
-       <%= guest_form.text_field :name %>
+       <%= g.label :name %><br />
+       <%= g.text_field :name %>
      </div>
      <div class="field">
-       <%= guest_form.label :passport %><br />
-       <%= guest_form.text_field :passport %>
+       <%= g.label :passport %><br />
+       <%= g.text_field :passport %>
      </div>
      <div class="field">
-       <%= guest_form.label :contact_details %><br />
-       <%= guest_form.text_area :contact_details %>
+       <%= g.label :contact_details %><br />
+       <%= g.text_area :contact_details %>
      </div>
   <% end %>
   

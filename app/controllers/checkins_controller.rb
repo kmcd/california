@@ -25,7 +25,8 @@ class CheckinsController < ApplicationController
   # GET /checkins/new.xml
   def new
     @checkin = Checkin.new
-
+    @checkin.guests.build if @checkin.guests.empty?
+    
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @checkin }
