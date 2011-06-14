@@ -1,0 +1,27 @@
+<h1>Listing occupancies</h1>
+
+<table>
+  <tr>
+    <th>Arrival</th>
+    <th>Departure</th>
+    <th>Reservation</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @occupancies.each do |occupancy| %>
+  <tr>
+    <td><%= occupancy.arrival %></td>
+    <td><%= occupancy.departure %></td>
+    <td><%= occupancy.reservation_id %></td>
+    <td><%= link_to 'Show', occupancy %></td>
+    <td><%= link_to 'Edit', edit_occupancy_path(occupancy) %></td>
+    <td><%= link_to 'Destroy', occupancy, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Occupancy', new_occupancy_path %>

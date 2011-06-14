@@ -1,9 +1,0 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
-
-one:
-  arrival: 2011-06-14 08:59:18
-  reservation_id: 1
-
-two:
-  arrival: 2011-06-14 08:59:18
-  reservation_id: 1

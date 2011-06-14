@@ -1,13 +1,11 @@
 California::Application.routes.draw do
+  resources :occupancies
   resources :rooms
-
-  resources :guests
-
-  resources :checkins
-
+  resources :guests 
   resources :reservations
-
   resources :hotels
+  
+  match 'availability' => 'availability#search'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

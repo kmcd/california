@@ -1,4 +1,4 @@
-class Checkin < ActiveRecord::Base
+class Occupancy < ActiveRecord::Base
   belongs_to :reservation
   
   has_many :guests

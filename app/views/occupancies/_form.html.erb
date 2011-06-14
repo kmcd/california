@@ -1,10 +1,10 @@
-<%= form_for(@checkin) do |f| %>
-  <% if @checkin.errors.any? %>
+<%= form_for(@occupancy) do |f| %>
+  <% if @occupancy.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@checkin.errors.count, "error") %> prohibited this checkin from being saved:</h2>
+      <h2><%= pluralize(@occupancy.errors.count, "error") %> prohibited this occupancy from being saved:</h2>
 
       <ul>
-      <% @checkin.errors.full_messages.each do |msg| %>
+      <% @occupancy.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>
@@ -15,15 +15,13 @@
     <%= f.label :arrival %><br />
     <%= f.datetime_select :arrival %>
   </div>
-  
+  <div class="field">
+    <%= f.label :departure %><br />
+    <%= f.datetime_select :departure %>
+  </div>
   <div class="field">
     <%= f.label :reservation_id %><br />
     <%= f.text_field :reservation_id %>
-  </div>
-  
-  <div class="field">
-    <%= f.label :room_id %><br />
-    <%= f.collection_select :room_id, Room.all, :id, :number %>
   </div>
   
   <%= f.fields_for :guests do |g| %>

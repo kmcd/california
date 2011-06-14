@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Arrival:</b>
+  <%= @occupancy.arrival %>
+</p>
+
+<p>
+  <b>Departure:</b>
+  <%= @occupancy.departure %>
+</p>
+
+<p>
+  <b>Reservation:</b>
+  <%= @occupancy.reservation_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_occupancy_path(@occupancy) %> |
+<%= link_to 'Back', occupancies_path %>

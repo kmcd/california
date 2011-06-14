@@ -1,0 +1,23 @@
+Search: Start dates, End date
+
+<table>
+   <tr>
+      <th>Date</th>
+      <% @rooms.each do |room| %>
+         <th><%= room.number %></th>
+      <% end %>
+   </tr>
+   
+   <% (Date.today..30.days.from_now.to_date).to_a.each do |date| %>
+      <tr>
+         <td><%= date.to_s(:short) %></td>
+         
+         <% @rooms.each do |room| %>
+            <td class="<%= availablity_css room, date %>">
+               &nbsp;
+            </td>
+         <% end %>
+      </tr>
+   <% end %>
+</table>
+
