@@ -37,3 +37,5 @@ body {
 .free { background-color: green; }
 .taken { background-color: red; }
 .availability td { min-width: 20px; }
+
+.notice { background-color: lightgreen; }

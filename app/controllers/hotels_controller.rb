@@ -1,5 +1,5 @@
 class HotelsController < ApplicationController
-  before_filter :authenticate, :except => :show
+  before_filter :authenticate, :except => [:show, :index]
   
   # GET /hotels
   # GET /hotels.xml

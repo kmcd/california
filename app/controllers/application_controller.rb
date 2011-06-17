@@ -1,13 +1,11 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  USERS = { "hotel-admin" => "super-secret" }
   
   private
   
   def authenticate
-    USERS[username]
-    
-    flash[:error] = 'Invalid login'
-    redirect_to :login
+    unless session[:logged_in]
+      redirect_to '/sessions/new'
+    end
   end
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110614172842) do
+ActiveRecord::Schema.define(:version => 20110617115418) do
 
   create_table "checkins", :force => true do |t|
     t.datetime "arrival"
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(:version => 20110614172842) do
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "admin_password"
   end
 
   create_table "occupancies", :force => true do |t|
