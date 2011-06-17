@@ -25,6 +25,6 @@ class SessionsController < ApplicationController
       flash[:error] = 'Error sending email reminder'
     end
     
-    redirect_to '/'
+    redirect_to :back
   end
 end

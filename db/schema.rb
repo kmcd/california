@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110617115418) do
+ActiveRecord::Schema.define(:version => 20110617171517) do
 
   create_table "checkins", :force => true do |t|
     t.datetime "arrival"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(:version => 20110617115418) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "checkin_id"
+    t.integer  "occupancy_id"
   end
 
   create_table "hotels", :force => true do |t|
@@ -35,6 +36,14 @@ ActiveRecord::Schema.define(:version => 20110617115418) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "admin_password"
+  end
+
+  create_table "images", :force => true do |t|
+    t.string   "filename"
+    t.string   "type"
+    t.binary   "data"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "occupancies", :force => true do |t|
@@ -63,6 +72,10 @@ ActiveRecord::Schema.define(:version => 20110617115418) do
     t.integer  "price"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "picture_file_name"
+    t.string   "picture_content_type"
+    t.integer  "picture_file_size"
+    t.datetime "picture_updated_at"
   end
 
 end

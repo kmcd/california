@@ -5,6 +5,8 @@ class Room < ActiveRecord::Base
   has_many :reservations
   has_many :occupancies
   
+  has_attached_file :picture
+  
   def number_and_name
     [ number, name ].join ' '
   end

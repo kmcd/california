@@ -1,5 +1,7 @@
 California::Application.routes.draw do
+  post "add_guest" => "occupancies#add_guest", :as => :add_guest
   resources :occupancies
+  
   resources :rooms
   resources :guests 
   resources :reservations
@@ -8,7 +10,7 @@ California::Application.routes.draw do
   get "sessions/new"
   post "sessions/create"
   get "sessions/destroy"
-  get "sessions/reminder"
+  get "sessions/reminder", :as => :password_reminder
   
   match 'availability' => 'availability#search'
   

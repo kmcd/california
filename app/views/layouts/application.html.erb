@@ -12,8 +12,6 @@
    </div>
    
    <div class='content'>
-      <%= content_tag(:div, flash[:notice], :class => 'notice') if flash[:notice] %>  
-   
       <h1 class='name'>Hotel California</h1>
       
       <ol class='nav'>
@@ -21,14 +19,14 @@
          <li><%= link_to 'Rooms', rooms_path %></li>
          <li><%= link_to 'Availability', availability_path %></li>
          <li><%= link_to 'Reservations', reservations_path %></li>
-         <li><%= link_to 'Guests', guests_path %></li>
-         <li><%= link_to 'Occupancies', occupancies_path %></li>
          
          <% if session[:logged_in] %>
+            <li><%= link_to 'Guests', guests_path %></li>
+            <li><%= link_to 'Occupancies', occupancies_path %></li>
             <li><%= link_to 'Log out', sessions_destroy_path %></li>
+         <% else %>
+            <li><%= link_to 'Log in', sessions_new_path %></li>
          <% end %>
-         
-         <li><%= link_to 'Password reminder', sessions_reminder_path %></li>
       </ol>
       
       <%= yield %>

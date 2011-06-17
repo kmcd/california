@@ -15,6 +15,13 @@
   <%= @occupancy.reservation_id %>
 </p>
 
+<p>
+  <b>Guests:</b>
+  <% @occupancy.guests.each do |guest| %>
+    <%= link_to guest.name, guest_path(guest) %>
+  <% end %>
+</p>
+
 
 <%= link_to 'Edit', edit_occupancy_path(@occupancy) %> |
 <%= link_to 'Back', occupancies_path %>

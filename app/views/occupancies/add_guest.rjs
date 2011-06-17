@@ -1,0 +1,2 @@
+# page.insert_html :bottom, :guests, :partial => 'guest_form', :object => f
+page.alert 'hello'

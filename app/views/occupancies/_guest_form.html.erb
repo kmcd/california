@@ -1,0 +1,14 @@
+<%= guest_form.fields_for :guests, Guest.new do |g| %>
+  <div class="field">
+    <%= g.label :name %><br />
+    <%= g.text_field :name %>
+  </div>
+  <div class="field">
+    <%= g.label :passport %><br />
+    <%= g.text_field :passport %>
+  </div>
+  <div class="field">
+    <%= g.label :contact_details %><br />
+    <%= g.text_area :contact_details %>
+  </div>
+<% end %>

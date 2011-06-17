@@ -28,20 +28,19 @@
     <%= f.collection_select :room_id, Room.all, :id, :number %>
   </div>
   
-  <%= f.fields_for :guests do |g| %>
-     <div class="field">
-       <%= g.label :name %><br />
-       <%= g.text_field :name %>
-     </div>
-     <div class="field">
-       <%= g.label :passport %><br />
-       <%= g.text_field :passport %>
-     </div>
-     <div class="field">
-       <%= g.label :contact_details %><br />
-       <%= g.text_area :contact_details %>
-     </div>
-  <% end %>
+  <div id='guests'>
+    <h3>Guests</h3>
+    <% @occupancy.guests.each do |guest| %>
+      <%= link_to guest.name, guest_path(guest) %>
+    <% end %>
+  </div>
+  
+  <%# link_to_function('Show Guest') {|page| page.visual_effect :highlight, 'guests' } %>
+    
+  <%= link_to_function 'Add Guest' do |page|
+        page.insert_html :bottom, :guests, :partial => 'guest_form', :object => f
+      end
+  %>
   
   <div class="actions">
     <%= f.submit %>

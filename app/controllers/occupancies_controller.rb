@@ -25,11 +25,14 @@ class OccupanciesController < ApplicationController
   # GET /occupancies/new.xml
   def new
     @occupancy = Occupancy.new
-
+    
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @occupancy }
     end
+  end
+  
+  def add_guest
   end
 
   # GET /occupancies/1/edit
