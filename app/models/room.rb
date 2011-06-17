@@ -4,6 +4,7 @@ class Room < ActiveRecord::Base
   
   has_many :reservations
   has_many :occupancies
+  has_many :guests, :through => :occupancies
   
   has_attached_file :picture
   
