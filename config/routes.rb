@@ -8,6 +8,7 @@ California::Application.routes.draw do
   get "sessions/new"
   post "sessions/create"
   get "sessions/destroy"
+  get "sessions/reminder"
   
   match 'availability' => 'availability#search'
   

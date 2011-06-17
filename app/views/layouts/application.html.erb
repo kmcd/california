@@ -27,6 +27,8 @@
          <% if session[:logged_in] %>
             <li><%= link_to 'Log out', sessions_destroy_path %></li>
          <% end %>
+         
+         <li><%= link_to 'Password reminder', sessions_reminder_path %></li>
       </ol>
       
       <%= yield %>
