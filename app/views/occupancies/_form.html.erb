@@ -35,7 +35,7 @@
     <% end %>
   </div>
   
-  <%# link_to_function('Show Guest') {|page| page.visual_effect :highlight, 'guests' } %>
+  <%= link_to_function('Show Guest') {|page| page.visual_effect :highlight, 'guests' } %>
     
   <%= link_to_function 'Add Guest' do |page|
         page.insert_html :bottom, :guests, :partial => 'guest_form', :object => f

@@ -12,8 +12,8 @@
 
 <% @occupancies.each do |occupancy| %>
   <tr>
-    <td><%= occupancy.arrival %></td>
-    <td><%= occupancy.departure %></td>
+    <td><%= occupancy.arrival.to_s(:short) %></td>
+    <td><%= occupancy.departure.to_s(:long) %></td>
     <td><%= occupancy.reservation_id %></td>
     <td><%= link_to 'Show', occupancy %></td>
     <td><%= link_to 'Edit', edit_occupancy_path(occupancy) %></td>

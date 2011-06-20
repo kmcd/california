@@ -13,8 +13,8 @@
 
 <% @reservations.each do |reservation| %>
   <tr>
-    <td><%= reservation.arrival %></td>
-    <td><%= reservation.departure %></td>
+    <td><%= reservation.arrival.strftime("%a %b %d %Y %H:%M") %></td>
+    <td><%= reservation.departure.to_s :nice %></td>
     <td><%= reservation.room_id %></td>
     <td><%= reservation.guest_id %></td>
     <td><%= link_to 'Show', reservation %></td>
